@@ -1,10 +1,47 @@
   <nav>
     <div class="nav-wrapper">
+
       <a href="#!" class="brand-logo center">WELCOME TO WEBSITE</a>
       <ul class="left hide-on-med-and-down">
         <li class="active"><a href="{% url 'index' %}">Home</a></li>
-          <li class="active"><a href="{% url 'projects' %}">projects</a></li>
-        <li class="active"><a href="{% url 'languages' %}">Languages</a></li>
+          <li class="active"><a href="{% url 'projects' %}">Aboutus</a></li>
+        <li class="active"><a href="{% url 'languages' %}">BestSellers</a></li>
       </ul>
+           <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="active"><a href=admin/logout/>Logout</a></li>
+      </ul>
+
     </div>
+
   </nav>
+    <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+      </div>
+      <a href="#user"><img class="circle responsive-img" src="https://media-exp1.licdn.com/dms/image/C4D03AQHf-Kwp-SlTQQ/profile-displayphoto-shrink_200_200/0/1639797148452?e=1652918400&v=beta&t=0q0lpHmRBOD-eKBxpoQSQC5PTxUvirrCMxBPehJX1zM"></a>
+      <a href="#name"><span class="white-text name">Badisa Naveen</span></a>
+      <a href="#email"><span class="white-text email">naveenadisa5655@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">computer</i>Laptops</a></li>
+     <li><a href="#!"><i class="material-icons">phone_android</i>Mobiles</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Helping & Settings</a></li>
+    <li><a class="waves-effect" href="#!">Customer Service</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+
+
+
+  {% block script %}
+ <script>
+
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+ </script>
+
+{% endblock %}
+
